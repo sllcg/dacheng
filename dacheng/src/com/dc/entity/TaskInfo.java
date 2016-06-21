@@ -19,8 +19,17 @@ public class TaskInfo implements java.io.Serializable {
 	private String state;
 	private ProjectInfo projectId;//多对一的任务和项目
 	private PersonnelInfo personnelId;//多对一的任务和人员
+	private ProjectStatus projectStatus;//多对一的任务和项目状态
 
 	// Constructors
+
+	public ProjectStatus getProjectStatus() {
+		return projectStatus;
+	}
+
+	public void setProjectStatus(ProjectStatus projectStatus) {
+		this.projectStatus = projectStatus;
+	}
 
 	/** default constructor */
 	public TaskInfo() {
