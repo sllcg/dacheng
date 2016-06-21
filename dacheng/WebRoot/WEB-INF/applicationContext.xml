@@ -25,9 +25,20 @@
 				<prop key="hibernate.dialect">
 					org.hibernate.dialect.MySQLDialect
 				</prop>
+				<prop key="current_session_context_class">thread</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				
 			</props>
 		</property>
-	</bean>
+		<property name="mappingResources">
+			<list>
+				<value>com/dc/entity/PersonnelInfo.hbm.xml</value>
+				<value>com/dc/entity/ProjectInfo.hbm.xml</value>
+				<value>com/dc/entity/TaskInfo.hbm.xml</value>
+				<value>com/dc/entity/FileInfo.hbm.xml</value>
+				<value>com/dc/entity/RoleInfo.hbm.xml</value></list>
+		</property></bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
