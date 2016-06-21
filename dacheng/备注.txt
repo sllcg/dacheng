@@ -1,0 +1,11 @@
+2016/06/21
+为了保证封装性，体现面向接口编程的思想。
+包备注：com.dc.action(action包：所有的action类，方法在此包内)
+     com.dc.dao(dao包：dao：数据库的操作；此包是dao的接口)
+     com.dc.daoImpl(dao的具体实现)
+     com.dc.service(服务层接口包，服务：业务的实现)
+     com.dc.serviceImpl(服务层的具体实现)
+文件夹备注：WebRoot>pages:存放jsp页面
+        WebRoot>css:样式表
+        WebRoot>font：字体
+        WebRoot>js：js脚本
