@@ -36,7 +36,6 @@
 				<value>com/dc/entity/PersonnelInfo.hbm.xml</value>
 				<value>com/dc/entity/ProjectInfo.hbm.xml</value>
 				<value>com/dc/entity/TaskInfo.hbm.xml</value>
-				<value>com/dc/entity/FileInfo.hbm.xml</value>
 				<value>com/dc/entity/RoleInfo.hbm.xml</value>
 				<value>com/dc/entity/ProjectStatus.hbm.xml</value></list>
 		</property></bean>

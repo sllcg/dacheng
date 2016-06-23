@@ -13,7 +13,14 @@ public class ServiceImplStatiProSyx implements ServiceStatiProSyx {
 		
 		return daoStatiProSyx.getAllProject();
 	}
+	
+@Override
+	public int getAllTaskFOP(int projectid) {
+		// TODO Auto-generated method stub
+		return daoStatiProSyx.getAllTaskFOP(projectid);
+	}
 
+/******************************************************************************************************/
 	public DaoStatiProSyx getDaoStatiProSyx() {
 		return daoStatiProSyx;
 	}

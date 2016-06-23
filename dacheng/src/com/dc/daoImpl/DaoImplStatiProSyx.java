@@ -29,15 +29,29 @@ public class DaoImplStatiProSyx extends HibernateDaoSupport implements DaoStatiP
 	private SessionFactory sessionFactory;
 
 	@Override
-	public int getAllProject() {
+	public int getAllProject() {     //获取总项目数
 		// TODO Auto-generated method stub
 		
 		String hsql="from ProjectInfo";
 		int proCount=this.getCurrentSession().createQuery(hsql).list().size();
-		//Query query = session.createQuery(hsql);
-		//int proCount=query.list().size();
-		
 		System.out.println("proCount:"+proCount);
 		return proCount;
 	}
+
+	@Override
+	public int getAllTaskFOP(int projectid) {    //获取单独项目的总任务数
+		// TODO Auto-generated method stub
+		String hsql="from TaskInfo ti where ti.projectId="+projectid;
+		int taskConnFOP=this.getCurrentSession().createQuery(hsql).list().size();
+		System.out.println("taskConnFOP:"+taskConnFOP);
+		return taskConnFOP;
+	}
+
+	@Override
+	public int getAllStatusFOP(int projectid) {   //获取一个项目的全部阶段
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
 }

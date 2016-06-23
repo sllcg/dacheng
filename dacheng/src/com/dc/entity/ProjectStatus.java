@@ -4,6 +4,7 @@ public class ProjectStatus implements java.io.Serializable{
 	
 	private Integer id;
 	private String status;
+	private ProjectInfo projectInfo;
 	
 	public ProjectStatus(){
 		
@@ -24,6 +25,13 @@ public class ProjectStatus implements java.io.Serializable{
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public ProjectInfo getProjectInfo() {
+		return projectInfo;
+	}
+	public void setProjectInfo(ProjectInfo projectInfo) {
+		this.projectInfo = projectInfo;
+	}
+	
 	
 
 }

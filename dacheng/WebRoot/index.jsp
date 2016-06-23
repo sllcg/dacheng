@@ -27,5 +27,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <s:submit value="查看"></s:submit>
     </s:form>
     <s:property value="proConnt" />
+    <s:form action="taskConnt" method="post">
+    <input type="text" name="projectid" />
+    <s:submit value="确定"></s:submit>
+    </s:form>
+    <s:property value="taskconnt" />
   </body>
 </html>

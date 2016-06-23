@@ -13,5 +13,8 @@
         <property name="status" type="java.lang.String">
             <column name="status" length="16" not-null="true" />
         </property>
+        <many-to-one name="projectInfo" class="com.dc.entity.ProjectInfo">
+            <column name="projectid" />
+        </many-to-one>
     </class>
 </hibernate-mapping>

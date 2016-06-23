@@ -5,6 +5,9 @@
 		<action name="proConnt" class="actionStatiProSyx" method="getConnPor">
 			<result name="success">/index.jsp</result>
 		</action>
+		<action name="taskConnt" class="actionStatiProSyx" method="getTaskConnFOP">
+			<result name="success">/index.jsp</result>
+		</action>
 	</package>
 
 </struts>    

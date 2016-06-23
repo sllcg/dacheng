@@ -3,6 +3,8 @@ package com.dc.entity;
 import java.sql.Timestamp;
 import java.util.Set;
 
+import org.apache.struts2.ServletActionContext;
+
 /**
  * ProjectInfo entity. @author MyEclipse Persistence Tools
  */
@@ -16,9 +18,9 @@ public class ProjectInfo implements java.io.Serializable {
 	private Timestamp startTime;  //开始时间
 	private Timestamp foreEndTime;  //预计结束时间
 	private String clien;   //委托方
-	private Set<FileInfo> fileIds;//这里应该是一对多 项目和文件 
 	private Set<TaskInfo> taskInfos;//一对多的项目和任务
 	private Set<PersonnelInfo> personnelInfos;//一对多的项目和人员
+	private Set<ProjectStatus> projectStatus;  //一对多的项目和阶段
 
 	// Constructors
 
@@ -34,15 +36,15 @@ public class ProjectInfo implements java.io.Serializable {
 
 	/** full constructor */
 	public ProjectInfo(String name, Timestamp startTime,
-			Timestamp foreEndTime, String clien, Set<FileInfo> fileIds, Set<TaskInfo> taskInfos,
-			Set<PersonnelInfo> personnelInfos) {
+			Timestamp foreEndTime, String clien, Set<TaskInfo> taskInfos,
+			Set<PersonnelInfo> personnelInfos,Set<ProjectStatus> projectStatus) {
 		this.name = name;
 		this.startTime = startTime;
 		this.foreEndTime = foreEndTime;
 		this.clien = clien;
-		this.fileIds = fileIds;
 		this.taskInfos=taskInfos;
 		this.personnelInfos=personnelInfos;
+		this.projectStatus=projectStatus;
 	}
 
 	// Property accessors
@@ -87,13 +89,6 @@ public class ProjectInfo implements java.io.Serializable {
 		this.clien = clien;
 	}
 		
-	public Set<FileInfo> getFileIds() {
-		return fileIds;
-	}
-
-	public void setFileIds(Set<FileInfo> fileIds) {
-		this.fileIds = fileIds;
-	}
 
 	public Set<TaskInfo> getTaskInfos() {
 		return taskInfos;
@@ -110,6 +105,15 @@ public class ProjectInfo implements java.io.Serializable {
 	public void setPersonnelInfos(Set<PersonnelInfo> personnelInfos) {
 		this.personnelInfos = personnelInfos;
 	}
+
+	public Set<ProjectStatus> getProjectStatus() {
+		return projectStatus;
+	}
+
+	public void setProjectStatus(Set<ProjectStatus> projectStatus) {
+		this.projectStatus = projectStatus;
+	}
+	
 	
 
 }

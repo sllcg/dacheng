@@ -22,12 +22,6 @@
         <property name="clien" type="java.lang.String">
             <column name="clien" length="50" not-null="true" />
         </property>
-        <set name="fileIds" table="file_info" inverse="false" lazy="true">
-         <key>
-            <column name="projectid" />
-         </key>
-         <one-to-many class="com.dc.entity.FileInfo" />
-        </set>
         <set name="taskInfos" table="task_info" inverse="false" lazy="true">
          <key>
             <column name="projectid" />
@@ -39,6 +33,12 @@
             <column name="projectid" />
          </key>
          <one-to-many class="com.dc.entity.PersonnelInfo" />
+        </set>
+        <set name="projectStatus" table="project_status" inverse="false" lazy="true">
+         <key>
+            <column name="projectid" />
+         </key>
+         <one-to-many class="com.dc.entity.ProjectStatus" />
         </set>
     </class>
 </hibernate-mapping>
