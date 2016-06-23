@@ -13,6 +13,12 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="30" not-null="true" />
         </property>
+        <property name="userName" type="java.lang.String">
+            <column name="username" length="30" not-null="true" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" length="30" not-null="true" />
+        </property>
         <property name="position" type="java.lang.String">
             <column name="position" length="16" not-null="true" />
         </property>

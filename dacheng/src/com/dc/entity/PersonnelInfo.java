@@ -12,6 +12,8 @@ public class PersonnelInfo implements java.io.Serializable {
 	//添加联系方式字段
 	private Integer id;
 	private String name;
+	private String userName;
+	private String password;
 	private String position;
 	private Integer seniority;
 	private RoleInfo role;//多对一的人员和角色
@@ -37,7 +39,8 @@ public class PersonnelInfo implements java.io.Serializable {
 
 	/** full constructor */
 	public PersonnelInfo(String name, String position, Integer seniority,
-			RoleInfo role, String state, ProjectInfo projectId,Set<TaskInfo> taskInfos) {
+			RoleInfo role, String state, ProjectInfo projectId,Set<TaskInfo> taskInfos,
+			String userName,String passWord) {
 		this.name = name;
 		this.position = position;
 		this.seniority = seniority;
@@ -45,6 +48,8 @@ public class PersonnelInfo implements java.io.Serializable {
 		this.state = state;
 		this.projectId = projectId;
 		this.taskInfos=taskInfos;
+		this.userName=userName;
+		this.password=passWord;
 	}
 
 	// Property accessors
@@ -112,6 +117,23 @@ public class PersonnelInfo implements java.io.Serializable {
 	public void setTaskInfos(Set<TaskInfo> taskInfos) {
 		this.taskInfos = taskInfos;
 	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 
 }

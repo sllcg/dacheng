@@ -44,4 +44,17 @@
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<!--******************************孙延鑫配置文件，勿动***************************************  -->
+	<bean id="daoImplStatiProSyx" class="com.dc.daoImpl.DaoImplStatiProSyx">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="serviceImplStatiProSyx" class="com.dc.serviceImpl.ServiceImplStatiProSyx">
+		<property name="daoStatiProSyx" ref="daoImplStatiProSyx"></property>
+	</bean>
+	<bean id="actionStatiProSyx" class="com.dc.action.ActionStatiProSyx">
+		<property name="serviceStatiProSyx" ref="serviceImplStatiProSyx"></property>
+	</bean>
+	<!--******************************孙延鑫配置文件，勿动***************************************  -->
 	<tx:annotation-driven transaction-manager="transactionManager" /></beans>

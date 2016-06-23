@@ -22,9 +22,6 @@
         <property name="clien" type="java.lang.String">
             <column name="clien" length="50" not-null="true" />
         </property>
-        <property name="state" type="java.lang.String">
-            <column name="state" length="8" />
-        </property>
         <set name="fileIds" table="file_info" inverse="false" lazy="true">
          <key>
             <column name="projectid" />
