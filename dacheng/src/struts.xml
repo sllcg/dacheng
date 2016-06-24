@@ -8,6 +8,23 @@
 		<action name="taskConnt" class="actionStatiProSyx" method="getTaskConnFOP">
 			<result name="success">/index.jsp</result>
 		</action>
+		
+			
+		<action name="save" class="ProjectSaveActionCwj">
+			<result name="success" type="redirect">CreateProject.jsp</result>
+		</action>
+		<action name="list" class="ProjectListActionCwj">	
+			<result name="success">ProjectListCwj.jsp</result>
+		</action>
+		<action name="find" class="ProjectFindActionCwj">
+			<result name="success">ProjectListCwj.jsp</result>
+		</action>
+		<action name="delete" class="ProjectDeleteActionCwj">
+			<result name="success" type="redirect">ProjectListCwj.jsp</result>
+		</action>
+		<action name="update" class="ProjectUpdateActionCwj">
+			<result name="success">ProjectUpdateCwj.jsp</result>
+		</action>
 	</package>
 
 </struts>    
